@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tigger = { character: "tigger",
+            greet: function(){
+                console.log("The wonderful thing about Tiggers is Tiggers are wonderful things!");
+                }
+        };
+
+        var pooh = { character: "Winnie the Pooh",
+        greet: function(){
+                console.log("The wonderful thing about pooh is pooh are wonderful things!");
+                }
+            
+         };
+        var piglet = { character: "Piglet",
+        greet: function(){
+                console.log("The wonderful thing about piglet is piglet are wonderful things!");
+                }
+            
+        };      
+        var bees = { character: "bees",
+        greet: function(){
+                console.log("The wonderful thing about bees is bees are wonderful things!");
+                }
+            
+        };      
+        var owl = { character: "owl",
+        greet: function(){
+                console.log("The wonderful thing about owl is owl are wonderful things!");
+                }
+            
+        }; 
+        var robin= { character: "christopher robon",
+        greet: function(){
+                console.log("The wonderful thing about robin is robin are wonderful things!");
+                }
+            
+        }; 
+        var rabbit = { character: "rabbit",
+        greet: function(){
+                console.log("The wonderful thing about rabbit is rabbit are wonderful things!");
+                }
+            
+        }; 
+        var gopher= { character: "gopher",
+        greet: function(){
+                console.log("The wonderful thing about gopher is gopher are wonderful things!");
+                }
+            
+        }; 
+        var kanga= { character: " kanga",
+        greet: function(){
+                console.log("The wonderful thing about kanga is kanga are wonderful things!");
+                }
+            
+        }; 
+        var eeyore= { character: "eeyore",
+        greet: function(){
+                console.log("The wonderful thing about eeyore is eeyore are wonderful things!");
+                }
+            
+        }; 
+        var heffalumps= { character: "heffalumps",
+        greet: function(){
+                console.log("The wonderful thing about heffalumps is heffalumps are wonderful things!");
+                }
+            
+        }; 
+
+
+        tigger.north = pooh; 
+
+
+        pooh.south = tigger;
+        pooh.west = piglet;
+        pooh.east = bees;
+        pooh.north = robin;
+
+
+        piglet.east = pooh; 
+        piglet.north = owl;         
+                                           
+        bees.west = pooh;          
+        bees.north = rabbit;          
+          
+        owl.south = piglet;
+        owl.east = robin;
+
+
+        robin.south = pooh;
+        robin.west = owl;
+        robin.east = rabbit;
+        robin.north = kanga;
+
+
+        rabbit.south = bees;
+        rabbit.west = robin;
+        rabbit.east = gopher;
+
+
+        gopher.west = rabbit;
+
+        kanga.south = robin;
+        kanga.north = eeyore;
+
+
+        eeyore.south = kanga;
+        eeyore.east = heffalumps;
+
+
+        heffalumps.west = eeyore;
+
+        var player = {
+            location: tigger
+        }
+
+
+        function move(direction){
+            if(player.location[direction]== honey ){
+                console.log("cannot go that way fam")
+            }
+            else{
+                player.location = player.location[direction];
+                console.log("You are now at " + player.location.character + "'s house");
+                player.location.greet();
+            }
+        }
+
+
+
+        function pickup(direction){
+
+
+
+        function mission(direction){
+
+            if(player.location[direction]== undefined ){
+                console.log("Winnie the Pooh is looking for honey! can you help?")
+            }
+            characters = [pooh, tigger, piglet, robin, eeyore, rabbit,owl, gopher, kanaga, heffalumps];
+            ran = Math.floor(math.random()*10);
+            var lcoation = characters[ran]["character"];
+            console.log("Location to drop honey is " + location);
+            return location;
+        
+        }
+
+
+
+        function drop(direction){
+                console.log(mission());
+                console.log(player.location.character)
+                if(mission() == player.location.character){
+                        if(!player.honey){
+                                console.log("Whoops! No honey to drop!)")
+                        }
+                        else{
+                                console.log(" Congradualtions! You delivered the honey to Winne the Pooh")
+                                player.honey = false;
+                        }
+                }
+                else{
+                        console.log("Whoops! This isn't the place that needs the honey!")
+                }
+        }
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
+
+
